@@ -13,6 +13,7 @@
 // ICE BOX: Once players input a word, they will have a back (erase) button in case they selected the wrong letter
 // ================== 1ST HTML PAGE ========================= //
 // Main game board that looks like wireframe, with a play button
+// CSS Media query: reszpondsive design adjusts for mobile; button siz changes
 // ICE BOX: Main game page consists of the game with the board and everything behind the play button blurred out
 
 // ================== 2nd HTML PAGE ========================= //

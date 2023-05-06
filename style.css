@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(33, 33, 33);
+}
+
+main {
+  margin: 5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bank {
+  display: grid;
+  grid-template-columns: repeat(5, 8vmin);
+  grid-template-rows: repeat(2, 6.5vmin);
+  gap: 1.5vmin;
+  margin: 5vmin;
+}
+
+.letterBtn {
+  border-radius: 45%;
+}
+
+.yellow {
+  background-color: rgb(252, 195, 64);
+}
+
+.orange {
+  background-color: rgb(241, 89, 41);
+}
+
+.blue {
+  background-color: rgb(46, 166, 222);
+}
+.submit {
+  height: 6.5vmin;
+  width: 24vmin;
+  margin: 5vmin;
+  background-color: rgb(223, 223, 233);
+  color: rgb(33, 33,33);
+  border-radius: 4vmin;
+  font-weight: 700;
+  font-size: 2.5vmin;
+  letter-spacing: .5vmin;
+}
