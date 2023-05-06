@@ -1,22 +1,23 @@
-// Define all required constant variables
-// Declare all app-wide state variables
-// Separate word bank variables according to levels
-// Create an init function that will kick the game off
-// Init function should initialize state variables and render() to the DOM for the first time
-// Game begins when Play Now button is clicked
-// Timer begins when play button is clicked
-// Invoke the init function
+// ================== JavaScript ========================= //
+// Create a word bank stored in an array of objects with 10 words for an MVP
+// Create a play button that begins the game and iterates over the word bank array (for MVP)
+// Players can select word buttons on the screen
+// After the player selects their word, the next word and word bank replaces the previous word and the input field turns gold to indicate the correct word was used
+// Players can only use a letter once, so there needs to be guards in place against that
+// For MVP, there will not be a back button, yopu will need to input in the correct order
+// track the words that were used in a temporary variable so when played, they will not be used until after the round
+// After each round we can reset the used words so they can be included in the word bank again
+// Reset all variables and begin again
 
-// Create the render function, including:
-// render message function
-// render control function
-// render board function
-// render timer function
-// score tracker function
+// ICE BOX: You can input words into the game by typing
+// ICE BOX: Once players input a word, they will have a back (erase) button in case they selected the wrong letter
+// ================== 1ST HTML PAGE ========================= //
+// Main game board that looks like wireframe, with a play button
+// ICE BOX: Main game page consists of the game with the board and everything behind the play button blurred out
 
-// Create all event listeners, at least 2 are needed
-// Use event delegation for the event listener (this is where most of the logic will be)
-// Make sure to invoke the render function again during an event listener
+// ================== 2nd HTML PAGE ========================= //
 
-// Game play will begin with 90 seconds on the clock to represent the first round
-// Player advances to ther next round if they reach the required points for that round
+// HTML index page two:
+// Page with main header image for game
+// Page has game instructions and game benefits
+// ICE BOX: This page can also list all of the top scores
