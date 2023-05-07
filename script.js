@@ -73,12 +73,21 @@ const wordBank = [
     points: 45,
   },
 ]
+
 /*----- state variables -----*/
 let score // Tracks current score
-let letterBank //
-
+let usedWords // Tracks words that have been used in the game already
+let letterBank // Represents current set of letters visible in the game
+let wordBar // represents the word that needs to be input after each word
+let defPrompt // represents definition prompt, updated after each word
 /*----- cached elements  -----*/
-
+const playBtn = document.getElementById("submit")
+const defPromptEl = document.getElementById("def-prompt")
+const wordBarEL = document.getElementById("wordBar")
 /*----- functions -----*/
-
+//Create the game initializer function
+const init = () => {
+  letterBank = ["w", "o", "r", "d", "r", "e", "c", "a", "l", "l"]
+  render()
+}
 /*----- event listeners -----*/
