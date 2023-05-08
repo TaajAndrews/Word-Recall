@@ -10,22 +10,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="style.css">
-  <title>Word-Recall</title>
+  <title>Word Recall</title>
 </head>
-<body class="page-one">
-  <header>
-    <h1>WORD RECALL</h1>
-  </header>
-  <section>
-    <details>
-      <summary>HOW TO PLAY?</summary>
-      <div>
-        <p>- Read the definition. </p>
-        <p>- Use the letters provided to recall the correct word.</p>
-        <p>- Have fun!</p>
-      </div>
-    </details>
+<body>
+<header>
+  <div id="scorecard">5650</div>
+  <div id="timer">1:14</div>
+</header>
+<main> 
+  <h2 id="def-prompt"></h2>
+  <p id="wordBar"></p>
+  <section id="bank">
+    <button id="0" class="letterBtn yellow"></button>
+    <button id="1" class="letterBtn orange"></button>
+    <button id="2" class="letterBtn blue"></button>
+    <button id="3" class="letterBtn yellow"></button>
+    <button id="4" class="letterBtn orange"></button>
+    <button id="5" class="letterBtn blue"></button>
+    <button id="6" class="letterBtn yellow"></button>
+    <button id="7" class="letterBtn orange"></button>
+    <button id="8" class="letterBtn blue"></button>
+    <button id="9" class="letterBtn yellow"></button>
   </section>
-  <button id="playBtn">PLAY NOW</button>
+  <section class="button">
+    <button id="submit">SUBMIT</button> 
+    <button id="backspace"><span class="material-symbols-outlined">
+      backspace
+      </span></button>
+  </section>
+</main>
 </body>
 </html>
