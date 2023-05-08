@@ -108,11 +108,14 @@ const init = () => {
 }
 const render = () => {
   // renderWordBar()
-  renderDefPrompt()
+  renderDefPrompt(count)
   renderBoard(count)
 }
 
-const renderDefPrompt = () => {}
+const renderDefPrompt = (count) => {
+  defPrompt = wordBank[count].defintion
+  defPromptEl.innerText = defPrompt
+}
 
 const renderBoard = (count) => {
   letterBoard = wordBank[count].letters
