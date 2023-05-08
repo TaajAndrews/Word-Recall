@@ -2,7 +2,7 @@
 const wordBank = [
   {
     word: "critique",
-    defintion: "to examine in an analytical manner",
+    definition: "to examine in an analytical manner",
     letters: ["q", "c", "q", "e", "t", "r", "i", "u", "g", "i"],
     points: 40,
   },
@@ -99,21 +99,21 @@ const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
 /*----- functions -----*/
 const init = () => {
+  count = 0
   letterBoard = ["", "", "", "", "", "", "", "", "", ""]
   wordBar = ""
   defPrompt = ""
   correctWord
-  count = 0
   render()
 }
 const render = () => {
-  // renderWordBar()
-  renderDefPrompt(count)
+  // renderWordBar(count)
   renderBoard(count)
+  renderDefPrompt(count)
 }
 
 const renderDefPrompt = (count) => {
-  defPrompt = wordBank[count].defintion
+  defPrompt = wordBank[count].definition
   defPromptEl.innerText = defPrompt
 }
 
@@ -132,4 +132,16 @@ const renderBoard = (count) => {
 }
 
 /*----- event listeners -----*/
-init()
+const tempLtr = []
+const handleClickedLetter = (evt) => {
+  const clkLtr = evt.target.innerText
+  if (tempLtr.length < 10) {
+    tempLtr.push(clkLtr)
+    const newWord = tempLtr.join(" ")
+    wordBarEL.innerText = newWord
+  }
+}
+
+init() 
+
+document.getElementById("bank").addEventListener("click", handleClickedLetter)
