@@ -147,7 +147,7 @@ const handleClickedLetter = (evt) => {
   const clkLtr = evt.target.innerText
   if (tempLtr.length < 10) {
     tempLtr.push(clkLtr)
-    const newWord = tempLtr.join(" ")
+    const newWord = tempLtr.join("")
     wordBarEL.innerText = newWord
   }
   render()
@@ -165,8 +165,19 @@ const handleClickSubmit = (evt) => {
   render()
 }
 
+const handleBackSpace = (evt) => {
+  const bkSpace = evt.target // entire button
+  if (bkSpace) {
+    tempLtr.pop()
+    wordBarEL.innerText = tempLtr.join("")
+  }
+  render()
+}
+
 init()
 
 document.getElementById("bank").addEventListener("click", handleClickedLetter)
 
 submitBtn.addEventListener("click", handleClickSubmit)
+
+document.getElementById("backspace").addEventListener("click", handleBackSpace)

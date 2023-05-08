@@ -51,7 +51,7 @@ main {
 #submit {
   height: 6.5vmin;
   width: 24vmin;
-  margin: 5vmin;
+  margin: 5vmin 1vmin;
   background-color: rgb(223, 223, 233);
   color: rgb(33, 33,33);
   border-radius: 4vmin;
@@ -110,4 +110,16 @@ h2 {
   letter-spacing: .5vmin;
   text-align: center;
   /* box-shadow: 0px 1px 8px rgba(223, 223, 223 .7) */
+}
+
+#backspace {
+  border-radius: 5vmin;
+  padding: .5vmin;
+}
+.button {
+  /* display: flexbox; */
+}
+
+.material-symbols-outlined {
+  font-size: 4vmin;
 }
