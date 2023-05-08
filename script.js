@@ -99,11 +99,12 @@ const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
 /*----- functions -----*/
 const init = () => {
-  count = 1
+  count = 0
   letterBoard = ["", "", "", "", "", "", "", "", "", ""]
   wordBar = ""
   defPrompt = ""
   correctWord
+  wordBarEL.style.borderColor = "rgb(223, 223, 223)"
   render()
 }
 const render = () => {
@@ -131,25 +132,39 @@ const renderBoard = (count) => {
   btn9.innerText = letterBoard[9]
 }
 
+const renderWordBar = () => {
+  // resets border color again
+  wordBarEL.style.borderColor = "rgb(223, 223, 223)"
+  // render()
+}
+
 /*----- event listeners -----*/
-const tempLtr = []
+let tempLtr = []
 const handleClickedLetter = (evt) => {
+  if (evt.target.id === "bank") {
+    return
+  }
   const clkLtr = evt.target.innerText
   if (tempLtr.length < 10) {
     tempLtr.push(clkLtr)
     const newWord = tempLtr.join(" ")
     wordBarEL.innerText = newWord
   }
+  render()
 }
 
 const handleClickSubmit = (evt) => {
   const subClk = evt.target // entire button
   if (tempLtr.join("") === wordBank[count].word) {
-    wordBarEL.style.borderColor = "rgb(252, 195, 64)"
+    wordBarEL.innerText = ""
+    tempLtr = []
+    count++
   } else {
     wordBarEL.style.borderColor = "rgb(241, 89, 41)"
   }
+  render()
 }
+
 init()
 
 document.getElementById("bank").addEventListener("click", handleClickedLetter)
