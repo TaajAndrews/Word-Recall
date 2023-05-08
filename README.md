@@ -37,3 +37,5 @@ Keywords: Playful - Elevation - Mastery - Fun - Recall
 ![Mobile Wireframe](https://i.imgur.com/yIZDguw.png)
 
 #### **Credits**
+
+##### [Detail Tag](https://dev.to/felixdusengimana/lets-create-an-faq-section-with-html-and-css-only-detail-tag-explained-12gf)
