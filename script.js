@@ -83,7 +83,7 @@ let correctWord // 1 = correct word; -1 incorrect word
 let count
 let letterBoard
 /*----- cached elements  -----*/
-const playBtn = document.getElementById("submit")
+const submitBtn = document.getElementById("submit")
 const defPromptEl = document.getElementById("def-prompt")
 const wordBarEL = document.getElementById("wordBar")
 const letterBtnArray = [...document.querySelectorAll(".letterBtn")]
@@ -99,7 +99,7 @@ const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
 /*----- functions -----*/
 const init = () => {
-  count = 0
+  count = 1
   letterBoard = ["", "", "", "", "", "", "", "", "", ""]
   wordBar = ""
   defPrompt = ""
@@ -142,6 +142,16 @@ const handleClickedLetter = (evt) => {
   }
 }
 
-init() 
+const handleClickSubmit = (evt) => {
+  const subClk = evt.target // entire button
+  if (tempLtr.join("") === wordBank[count].word) {
+    wordBarEL.style.borderColor = "rgb(252, 195, 64)"
+  } else {
+    wordBarEL.style.borderColor = "rgb(241, 89, 41)"
+  }
+}
+init()
 
 document.getElementById("bank").addEventListener("click", handleClickedLetter)
+
+submitBtn.addEventListener("click", handleClickSubmit)
