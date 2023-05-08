@@ -73,21 +73,60 @@ const wordBank = [
     points: 45,
   },
 ]
-
 /*----- state variables -----*/
 let score // Tracks current score
-let usedWords // Tracks words that have been used in the game already
-let letterBank // Represents current set of letters visible in the game
-let wordBar // represents the word that needs to be input after each word
-let defPrompt // represents definition prompt, updated after each word
+let usedWords // words used in the game already
+let letterBank // currentletters visible in the game
+let wordBar // place to input word
+let defPrompt // definition prompt
+let correctWord // 1 = correct word; -1 incorrect word
+let count
+let letterBoard
 /*----- cached elements  -----*/
 const playBtn = document.getElementById("submit")
 const defPromptEl = document.getElementById("def-prompt")
 const wordBarEL = document.getElementById("wordBar")
+const letterBtnArray = [...document.querySelectorAll(".letterBtn")]
+const btn0 = document.getElementById("0")
+const btn1 = document.getElementById("1")
+const btn2 = document.getElementById("2")
+const btn3 = document.getElementById("3")
+const btn4 = document.getElementById("4")
+const btn5 = document.getElementById("5")
+const btn6 = document.getElementById("6")
+const btn7 = document.getElementById("7")
+const btn8 = document.getElementById("8")
+const btn9 = document.getElementById("9")
 /*----- functions -----*/
-//Create the game initializer function
 const init = () => {
-  letterBank = ["w", "o", "r", "d", "r", "e", "c", "a", "l", "l"]
+  letterBoard = ["", "", "", "", "", "", "", "", "", ""]
+  wordBar = ""
+  defPrompt = ""
+  correctWord
+  count = 0
   render()
 }
+const render = () => {
+  // renderWordBar()
+  renderDefPrompt()
+  renderBoard(count)
+}
+
+const renderDefPrompt = () => {}
+
+const renderBoard = (count) => {
+  letterBoard = wordBank[count].letters
+  btn0.innerText = letterBoard[0]
+  btn1.innerText = letterBoard[1]
+  btn2.innerText = letterBoard[2]
+  btn3.innerText = letterBoard[3]
+  btn4.innerText = letterBoard[4]
+  btn5.innerText = letterBoard[5]
+  btn6.innerText = letterBoard[6]
+  btn7.innerText = letterBoard[7]
+  btn8.innerText = letterBoard[8]
+  btn9.innerText = letterBoard[9]
+}
+
 /*----- event listeners -----*/
+init()
