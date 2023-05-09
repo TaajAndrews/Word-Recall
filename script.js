@@ -295,9 +295,21 @@ const wordBank = [
     points: 35,
   },
   {
-    word: "de",
+    word: "desecrate",
     definition: "to treat with disrespect",
     letters: ["a", "t", "c", "r", "w", "s", "e", "d", "e", "e"],
+    points: 45,
+  },
+  {
+    word: "dilatory",
+    definition: "procrastinating",
+    letters: ["r", "d", "l", "o", "i", "a", "t", "r", "y", "z"],
+    points: 40,
+  },
+  {
+    word: "delusion",
+    definition: "irrational belief in something untrue",
+    letters: ["i", "s", "o", "d", "u", "m", "l", "e", "n", "l"],
     points: 40,
   },
 ]
@@ -404,6 +416,14 @@ const handleBackSpace = (evt) => {
   render()
 }
 
+const handleSkip = (evt) => {
+  const skipBtn = evt.target
+  if (skipBtn) {
+    count++
+  }
+  render()
+}
+
 init()
 
 document.getElementById("bank").addEventListener("click", handleClickedLetter)
@@ -411,3 +431,5 @@ document.getElementById("bank").addEventListener("click", handleClickedLetter)
 submitBtn.addEventListener("click", handleClickSubmit)
 
 document.getElementById("backspace").addEventListener("click", handleBackSpace)
+
+document.getElementById("skip").addEventListener("click", handleSkip)
