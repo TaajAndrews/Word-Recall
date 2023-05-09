@@ -143,14 +143,8 @@ const btn7 = document.getElementById("7")
 const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
 /*----- functions -----*/
-
-const wordGenerator = (wordBank) => {
-  const randomWordIdx = Math.floor(Math.random() * wordBank.length)
-  return randomWordIdx
-}
-
 const init = () => {
-  count = wordGenerator(wordBank)
+  count = 0
   letterBoard = ["", "", "", "", "", "", "", "", "", ""]
   wordBar = ""
   defPrompt = ""
@@ -226,3 +220,22 @@ document.getElementById("bank").addEventListener("click", handleClickedLetter)
 submitBtn.addEventListener("click", handleClickSubmit)
 
 document.getElementById("backspace").addEventListener("click", handleBackSpace)
+
+
+
+
+
+// random function 
+// Object.keys 
+
+// math.floor(Math.random() * wordBank.length) 
+
+const wordGenerator = (wordBank) => {
+  const randomWordIdx = Math.floor(Math.random() * wordBank.length)
+  return wordBank[randomWordIdx]
+}
+
+
+
+
+//so this is the version before I replaced "count" with "wordGenerator(wordBank)", I wanted to see if I did this, will it generate a random word every time, or should I just replace the start with this one and then increment once each time? 

@@ -101,12 +101,12 @@ header {
 h2 {
   height: 12vmin;
   width: 45vmin;
-  padding: 4vmin;
+  padding: 3.25vmin;
   background-color: rgb(223, 223, 233);
   color: rgb(33, 33,33);
   border-radius: 5vmin;
   font-weight: 700;
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   letter-spacing: .5vmin;
   text-align: center;
   /* box-shadow: 0px 1px 8px rgba(223, 223, 223 .7) */
