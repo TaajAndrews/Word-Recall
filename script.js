@@ -114,6 +114,192 @@ const wordBank = [
     letters: ["e", "t", "e", "z", "i", "n", "f", "a", "d", "l"],
     points: 35,
   },
+  {
+    word: "applaud",
+    definition: "to commend, often by clapping",
+    letters: ["l", "n", "a", "x", "p", "r", "p", "d", "u", "a"],
+    points: 35,
+  },
+  {
+    word: "bankrupt",
+    definition: "unable to pay debts",
+    letters: ["a", "k", "t", "q", "r", "u", "b", "p", "r", "n"],
+    points: 40,
+  },
+  {
+    word: "archrival",
+    definition: "principal opponent",
+    letters: ["r", "h", "a", "a", "x", "i", "r", "v", "c", "l"],
+    points: 45,
+  },
+  {
+    word: "beginning",
+    definition: "time at which something starts",
+    letters: ["e", "n", "n", "g", "p", "n", "i", "i", "b", "g"],
+    points: 45,
+  },
+  {
+    word: "anonymity",
+    definition: "state of being unknown",
+    letters: ["n", "m", "t", "a", "y", "g", "y", "n", "i", "o"],
+    points: 45,
+  },
+  {
+    word: "alterable",
+    definition: "adaptable",
+    letters: ["t", "l", "a", "l", "a", "r", "b", "e", "e", "n"],
+    points: 45,
+  },
+  {
+    word: "placebo",
+    definition: "harmless pill that may cause psychological relief",
+    letters: ["b", "a", "e", "o", "l", "x", "d", "c", "p", "v"],
+    points: 45,
+  },
+  {
+    word: "prolific",
+    definition: "productive",
+    letters: ["o", "t", "f", "l", "r", "i", "q", "c", "i", "p"],
+    points: 40,
+  },
+  {
+    word: "belittle",
+    definition: "to make seem unimportant",
+    letters: ["e", "l", "l", "s", "b", "m", "t", "e", "i", "t"],
+    points: 40,
+  },
+  {
+    word: "befriend",
+    definition: "to bond with as a companion",
+    letters: ["n", "e", "i", "b", "d", "f", "r", "e", "o", "l"],
+    points: 40,
+  },
+  {
+    word: "bedazzle",
+    definition: "to captivate",
+    letters: ["a", "d", "e", "e", "z", "b", "l", "m", "y", "z"],
+    points: 40,
+  },
+  {
+    word: "continual",
+    definition: "happening again and again",
+    letters: ["n", "o", "n", "z", "i", "u", "a", "t", "c", "l"],
+    points: 45,
+  },
+  {
+    word: "container",
+    definition: "object used to hold something",
+    letters: ["e", "t", "a", "r", "z", "n", "n", "c", "i", "o"],
+    points: 45,
+  },
+  {
+    word: "discreet",
+    definition: "careful and cautious in one's behavior ",
+    letters: ["r", "l", "t", "i", "s", "e", "e", "n", "c", "d"],
+    points: 40,
+  },
+  {
+    word: "baffling",
+    definition: "confusing",
+    letters: ["a", "n", "f", "g", "f", "b", "i", "r", "t", "l"],
+    points: 40,
+  },
+  {
+    word: "control",
+    definition: "to have power over",
+    letters: ["o", "l", "r", "h", "o", "r", "c", "u", "t", "n"],
+    points: 35,
+  },
+  {
+    word: "intricate",
+    definition: "very complex",
+    letters: ["c", "n", "t", "a", "i", "e", "i", "b", "t", "r"],
+    points: 45,
+  },
+  {
+    word: "nemesis",
+    definition: "archenemy, especially one who is often victorious",
+    letters: ["e", "s", "y", "s", "e", "z", "i", "h", "m", "n"],
+    points: 35,
+  },
+  {
+    word: "convince",
+    definition: "to cause to believe something",
+    letters: ["c", "n", "o", "e", "i", "n", "l", "r", "v", "c"],
+    points: 40,
+  },
+  {
+    word: "combative",
+    definition: "ready to fight",
+    letters: ["f", "v", "e", "a-", "i", "t", "m", "o", "c", "b"],
+    points: 40,
+  },
+  {
+    word: "cacophony",
+    definition: "harsh sound",
+    letters: ["o", "y", "h", "a", "c", "n", "o", "p", "m", "c"],
+    points: 45,
+  },
+  {
+    word: "vivacious",
+    definition: "highly spirited",
+    letters: ["c", "v", "q", "i", "v", "a", "i", "u", "s", "o"],
+    points: 40,
+  },
+  {
+    word: "affidavit",
+    definition: "written legal declaration confirmed by oath",
+    letters: ["f", "v", "f", "a", "a", "d", "t", "i", "i", "f"],
+    points: 45,
+  },
+  {
+    word: "cohesive",
+    definition: "causing to stick together",
+    letters: ["i", "o", "v", "e", "d", "e", "s", "e", "c", "h"],
+    points: 40,
+  },
+  {
+    word: "charter",
+    definition: "to grant official recognition",
+    letters: ["e", "j", "t", "h", "r", "v", "a", "r", "c", "t"],
+    points: 35,
+  },
+  {
+    word: "compact",
+    definition: "closely packed together",
+    letters: ["o", "c", "m", "a", "c", "h", "u", "g", "t", "p-"],
+    points: 35,
+  },
+  {
+    word: "calcify",
+    definition: "to harden",
+    letters: ["a", "c", "o", "c", "l", "y", "i", "f", "i", "q"],
+    points: 35,
+  },
+  {
+    word: "incident",
+    definition: "episode, especially a negative one",
+    letters: ["t", "i", "r", "o", "d", "n", "i", "e", "c", "n"],
+    points: 40,
+  },
+  {
+    word: "decadent",
+    definition: "marked by self-indulgence",
+    letters: ["d", "j", "c", "a", "i", "e", "n", "e", "d", "t"],
+    points: 40,
+  },
+  {
+    word: "baneful",
+    definition: "extremely harmful",
+    letters: ["b", "u", "a", "o", "e", "n", "k", "l", "f", "v"],
+    points: 35,
+  },
+  {
+    word: "de",
+    definition: "to treat with disrespect",
+    letters: ["a", "t", "c", "r", "w", "s", "e", "d", "e", "e"],
+    points: 40,
+  },
 ]
 /*----- state variables -----*/
 let score // Tracks current score
@@ -161,7 +347,6 @@ const render = () => {
   renderBoard(count)
   renderDefPrompt(count)
 }
-
 
 const renderDefPrompt = (count) => {
   defPrompt = wordBank[count].definition
