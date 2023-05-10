@@ -231,7 +231,7 @@ const wordBank = [
   {
     word: "combative",
     definition: "ready to fight",
-    letters: ["f", "v", "e", "a-", "i", "t", "m", "o", "c", "b"],
+    letters: ["f", "v", "e", "a", "i", "t", "m", "o", "c", "b"],
     points: 40,
   },
   {
@@ -267,7 +267,7 @@ const wordBank = [
   {
     word: "compact",
     definition: "closely packed together",
-    letters: ["o", "c", "m", "a", "c", "h", "u", "g", "t", "p-"],
+    letters: ["o", "c", "m", "a", "c", "h", "u", "g", "t", "p"],
     points: 35,
   },
   {
@@ -321,15 +321,20 @@ let wordBar // place to input word
 let defPrompt // definition prompt
 let correctWord // 1 = correct word; -1 incorrect word
 let count
+let isDisabled
 let letterBoard
+let timerInterval
+let endGame
 /*----- cached elements  -----*/
+// queryselector
 const submitBtn = document.getElementById("submit")
 const defPromptEl = document.getElementById("def-prompt")
 const wordBarEl = document.getElementById("wordBar")
 const letterBtnArray = [...document.querySelectorAll(".letterBtn")]
-
+const bodyEl = document.getElementById("body")
+const letterBtnEl = document.querySelectorAll(".letterBtn")
 const timerEl = document.getElementById("timer")
-
+const allBtn = document.querySelectorAll("button")
 const btn0 = document.getElementById("0")
 const btn1 = document.getElementById("1")
 const btn2 = document.getElementById("2")
@@ -353,11 +358,14 @@ const init = () => {
   wordBar = ""
   defPrompt = ""
   wordBarEl.style.borderColor = "rgb(223, 223, 223)"
+  endGame = null
+  startTimer()
   render()
 }
 const render = () => {
   renderBoard(count)
   renderDefPrompt(count)
+  // startTimer()
 }
 
 const renderDefPrompt = (count) => {
@@ -385,6 +393,7 @@ const handleClickedLetter = (evt) => {
   if (evt.target.id === "bank") {
     return
   }
+  const usedLtr = evt.target
   const clkLtr = evt.target.innerText
   if (tempLtr.length < 10) {
     tempLtr.push(clkLtr)
@@ -394,8 +403,35 @@ const handleClickedLetter = (evt) => {
   render()
 }
 
+startTimer = () => {
+  clearInterval(timerInterval)
+  let sec = 30
+  let min = 1
+
+  timerInterval = setInterval(() => {
+    timerEl.innerHTML =
+      (min < 10 ? min : min) + ":" + (sec < 10 ? "0" + sec : sec)
+    sec--
+    if (min > 0 && sec === 0) {
+      min = 0
+      sec = 60
+    } else if ((min === 0) & (sec === -1)) {
+      clearInterval(timerInterval)
+      min = 0
+      sec = 0
+      // endGame = true
+    }
+  }, 1000)
+}
+
+// const gameOver = () => {
+//   if (endGame === true) {
+//     defPromptEl.innerText = "GAME OVER"
+//   }
+// }
+
 const handleClickSubmit = (evt) => {
-  const subClk = evt.target // entire button
+  const subClk = evt.target
   if (tempLtr.join("") === wordBank[count].word) {
     wordBarEl.style.borderColor = "rgb(223, 223, 223)"
     wordBarEl.innerText = ""
@@ -408,7 +444,7 @@ const handleClickSubmit = (evt) => {
 }
 
 const handleBackSpace = (evt) => {
-  const bkSpace = evt.target // entire button
+  const bkSpace = evt.target
   if (bkSpace) {
     tempLtr.pop()
     wordBarEl.innerText = tempLtr.join("")
@@ -419,6 +455,8 @@ const handleBackSpace = (evt) => {
 const handleSkip = (evt) => {
   const skipBtn = evt.target
   if (skipBtn) {
+    wordBarEl.innerText = ""
+    tempLtr = []
     count++
   }
   render()
