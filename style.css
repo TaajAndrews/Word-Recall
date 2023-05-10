@@ -25,7 +25,7 @@ main {
   grid-template-columns: repeat(5, 8vmin);
   grid-template-rows: repeat(2, 6.5vmin);
   gap: 1.5vmin;
-  margin: 5vmin;
+  margin: 6vmin 0 2vmin 0;
 }
 .letterBtn {
   border-radius: 45%;
@@ -98,33 +98,29 @@ header {
 }
 
 h2 {
-  height: 12vmin;
+  height: 18vmin;
   width: 45vmin;
-  padding: 3.25vmin;
+  padding: 4.25vmin 3vmin 2vmin 3vmin;
   background-color: rgb(223, 223, 233);
   color: rgb(33, 33,33);
   border-radius: 5vmin;
   font-weight: 700;
-  font-size: 2vmin;
-  letter-spacing: .5vmin;
+  font-size: 2.5vmin;
+  letter-spacing: .35vmin;
   text-align: center;
-  /* box-shadow: 0px 1px 8px rgba(223, 223, 223 .7) */
 }
 
 #backspace {
   height: 6.5vmin;
+  margin: 5vmin 1vmin;
   width: 8vmin;
-  margin: 0 1vmin;
   background-color: rgb(223, 223, 233);
   color: rgb(33, 33,33);
   border-radius: 4vmin;
   font-weight: 700;
-  font-size: 1.75vmin;
-  letter-spacing: .3vmin;
 }
-
 .material-symbols-outlined {
-  font-size: 4vmin;
+  font-size: 3.5vmin;
 }
 h1 {
   font-size: 8vmin;
@@ -176,4 +172,10 @@ summary {
 
 .clicked {
   background-color: rgb(223, 223, 223);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin: auto;
 }

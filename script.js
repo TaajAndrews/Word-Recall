@@ -348,7 +348,7 @@ const btn9 = document.getElementById("9")
 /*----- functions -----*/
 
 const wordGenerator = (wordBank) => {
-  const randomWordIdx = Math.floor(Math.random() * wordBank.length)
+  const randomWordIdx = Math.floor(Math.random() * wordBank.length - 10)
   return randomWordIdx
 }
 
@@ -407,7 +407,6 @@ startTimer = () => {
   clearInterval(timerInterval)
   let sec = 30
   let min = 1
-
   timerInterval = setInterval(() => {
     timerEl.innerHTML =
       (min < 10 ? min : min) + ":" + (sec < 10 ? "0" + sec : sec)
