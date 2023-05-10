@@ -335,6 +335,7 @@ const bodyEl = document.getElementById("body")
 const letterBtnEl = document.querySelectorAll(".letterBtn")
 const timerEl = document.getElementById("timer")
 const allBtn = document.querySelectorAll("button")
+const scoreCardEl = document.getElementById("scorecard")
 const btn0 = document.getElementById("0")
 const btn1 = document.getElementById("1")
 const btn2 = document.getElementById("2")
@@ -348,7 +349,7 @@ const btn9 = document.getElementById("9")
 /*----- functions -----*/
 
 const wordGenerator = (wordBank) => {
-  const randomWordIdx = Math.floor(Math.random() * wordBank.length - 10)
+  const randomWordIdx = Math.floor(Math.random() * wordBank.length - 1)
   return randomWordIdx
 }
 
@@ -358,6 +359,7 @@ const init = () => {
   wordBar = ""
   defPrompt = ""
   wordBarEl.style.borderColor = "rgb(223, 223, 223)"
+  score = 0
   endGame = null
   startTimer()
   render()
@@ -369,8 +371,14 @@ const render = () => {
 }
 
 const renderDefPrompt = (count) => {
-  defPrompt = wordBank[count].definition
-  defPromptEl.innerText = defPrompt
+  if (count === wordBank.length) {
+    count = 0
+    defPrompt = wordBank[count].definition
+    defPromptEl.innerText = defPrompt
+  } else {
+    defPrompt = wordBank[count].definition
+    defPromptEl.innerText = defPrompt
+  }
 }
 
 const renderBoard = (count) => {
@@ -429,6 +437,7 @@ startTimer = () => {
 //   }
 // }
 
+
 const handleClickSubmit = (evt) => {
   const subClk = evt.target
   if (tempLtr.join("") === wordBank[count].word) {
@@ -436,6 +445,8 @@ const handleClickSubmit = (evt) => {
     wordBarEl.innerText = ""
     tempLtr = []
     count++
+    score = score + wordBank[count].points
+    scoreCardEl.innerText = score
   } else {
     wordBarEl.style.borderColor = "rgb(241, 89, 41)"
   }
@@ -447,6 +458,7 @@ const handleBackSpace = (evt) => {
   if (bkSpace) {
     tempLtr.pop()
     wordBarEl.innerText = tempLtr.join("")
+    scoreCardEl.innerText = score
   }
   render()
 }
@@ -457,6 +469,8 @@ const handleSkip = (evt) => {
     wordBarEl.innerText = ""
     tempLtr = []
     count++
+    score -= 20
+    scoreCardEl.innerText = score
   }
   render()
 }
