@@ -658,6 +658,8 @@ const btn6 = document.getElementById("6")
 const btn7 = document.getElementById("7")
 const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
+
+let myMusic = document.getElementById("tunes")
 /*----- functions -----*/
 
 const wordGenerator = (wordBank) => {
@@ -679,7 +681,6 @@ const render = () => {
   renderBoard(count)
   renderDefPrompt(count)
 }
-
 const renderDefPrompt = (count) => {
   defPrompt = wordBank[count].definition
   defPromptEl.innerText = defPrompt
@@ -701,15 +702,19 @@ const renderBoard = (count) => {
 /*----- event listeners -----*/
 let tempLtr = []
 const handleClickedLetter = (evt) => {
-  if (evt.target.id === "bank") {
-    return
-  }
   const usedLtr = evt.target
-  const clkLtr = evt.target.innerText
-  if (tempLtr.length < 10) {
-    tempLtr.push(clkLtr)
-    const newWord = tempLtr.join("")
-    wordBarEl.innerText = newWord
+  if (endGame === null) {
+    if (evt.target.id === "bank") {
+      return
+    }
+    const clkLtr = evt.target.innerText
+    if (tempLtr.length < 10) {
+      tempLtr.push(clkLtr)
+      const newWord = tempLtr.join("")
+      wordBarEl.innerText = newWord
+    }
+  } else {
+    usedLtr.disabled = true
   }
   render()
 }
@@ -730,16 +735,12 @@ startTimer = () => {
       min = 0
       sec = 0
       endGame = true
+      wordBarEl.innerText = "GAME OVER"
+
+      defPromptEl.innerText = `SCORE: ${score}`
     }
   }, 1000)
 }
-
-// const gameOver = () => {
-//   if (endGame === true) {
-//     defPromptEl.innerText = "GAME OVER"
-//   }
-// }
-
 const handleClickSubmit = (evt) => {
   const subClk = evt.target
   if (endGame === null) {
@@ -761,10 +762,14 @@ const handleClickSubmit = (evt) => {
 
 const handleBackSpace = (evt) => {
   const bkSpace = evt.target
-  if (bkSpace) {
-    tempLtr.pop()
-    wordBarEl.innerText = tempLtr.join("")
-    scoreCardEl.innerText = score
+  if (endGame === null) {
+    if (bkSpace) {
+      tempLtr.pop()
+      wordBarEl.innerText = tempLtr.join("")
+      scoreCardEl.innerText = score
+    }
+  } else {
+    bkSpace.disabled = true
   }
   render()
 }
