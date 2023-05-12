@@ -326,8 +326,8 @@ let letterBoard
 let timerInterval
 let endGame
 /*----- cached elements  -----*/
-// queryselector
 const submitBtn = document.getElementById("submit")
+const playAgainBtn = document.getElementById("play-again")
 const defPromptEl = document.getElementById("def-prompt")
 const wordBarEl = document.getElementById("wordBar")
 const letterBtnArray = [...document.querySelectorAll(".letterBtn")]
@@ -361,6 +361,7 @@ const init = () => {
   wordBarEl.style.borderColor = "rgb(223, 223, 223)"
   score = 0
   endGame = null
+  playAgainBtn.style.visibility = "hidden"
   startTimer()
   render()
 }
@@ -424,6 +425,7 @@ startTimer = () => {
       endGame = true
       wordBarEl.innerText = "GAME OVER"
       defPromptEl.innerText = `SCORE: ${score}`
+      playAgainBtn.style.visibility = "visible"
     }
   }, 1000)
 }
@@ -442,6 +444,7 @@ const handleClickSubmit = (evt) => {
     }
   } else {
     subClk.disabled = true
+    tempLtr = []
   }
   render()
 }
