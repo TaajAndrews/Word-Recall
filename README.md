@@ -42,6 +42,8 @@ MVP:
 
 ![MVP](https://i.imgur.com/nAcUWpl.png)
 
+![MVP](https://i.imgur.com/FcLpV2P.png)
+
 #### **Credits**
 
 [Detail Tag Explanation](https://dev.to/felixdusengimana/lets-create-an-faq-section-with-html-and-css-only-detail-tag-explained-12gf)
