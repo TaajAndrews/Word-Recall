@@ -314,14 +314,11 @@ const wordBank = [
   },
 ]
 /*----- state variables -----*/
-let score // Tracks current score
-let usedWords // words used in the game already
-let letterBank // currentletters visible in the game
-let wordBar // place to input word
-let defPrompt // definition prompt
-let correctWord // 1 = correct word; -1 incorrect word
+let score 
+let letterBank 
+let wordBar 
+let defPrompt 
 let count
-let isDisabled
 let letterBoard
 let timerInterval
 let endGame
@@ -332,9 +329,7 @@ const defPromptEl = document.getElementById("def-prompt")
 const wordBarEl = document.getElementById("wordBar")
 const letterBtnArray = [...document.querySelectorAll(".letterBtn")]
 const bodyEl = document.getElementById("body")
-const letterBtnEl = document.querySelectorAll(".letterBtn")
 const timerEl = document.getElementById("timer")
-const allBtn = document.querySelectorAll("button")
 const scoreCardEl = document.getElementById("scorecard")
 const btn0 = document.getElementById("0")
 const btn1 = document.getElementById("1")
@@ -346,9 +341,7 @@ const btn6 = document.getElementById("6")
 const btn7 = document.getElementById("7")
 const btn8 = document.getElementById("8")
 const btn9 = document.getElementById("9")
-
 /*----- functions -----*/
-
 const wordGenerator = (wordBank) => {
   const randomWordIdx = Math.floor(Math.random() * wordBank.length - 1)
   return randomWordIdx

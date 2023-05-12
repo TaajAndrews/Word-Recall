@@ -4,7 +4,7 @@
 
 #### By: Taaj Andrews
 
-[GitHub](https://github.com/TaajAndrews) - [LinkedIn](https://linkedin.com/in/taajandrews) - [Trello](https://linkedin.com/in/taajandrews)
+[GitHub](https://github.com/TaajAndrews) - [LinkedIn](https://linkedin.com/in/taajandrews) - [Trello](https://trello.com/b/TZcWpSWW/word-recall)
 
 ### **Description**
 
@@ -35,8 +35,6 @@ Keywords: Playful - Elevation - Mastery - Fun - Recall
 ![Desktop Wireframe](https://i.imgur.com/Fl8nGYx.png)
 
 ![Mobile Wireframe](https://i.imgur.com/yIZDguw.png)
-
-ICEBOX:
 
 #### **Credits**
 
