@@ -32,9 +32,15 @@ Keywords: Playful - Elevation - Mastery - Fun - Recall
 
 ### **Screenshots**
 
+Wireframe:
+
 ![Desktop Wireframe](https://i.imgur.com/Fl8nGYx.png)
 
 ![Mobile Wireframe](https://i.imgur.com/yIZDguw.png)
+
+MVP:
+
+![MVP](https://i.imgur.com/nAcUWpl.png)
 
 #### **Credits**
 

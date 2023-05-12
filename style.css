@@ -104,6 +104,7 @@ header {
   text-align: center;
 }
 #scorecard {
+  margin: 0 0 0 5vmin;
   height: 6.5vmin;
   min-width: 8vmin;
   max-width: 20vmin;
@@ -116,7 +117,7 @@ header {
 }
 #timer {
   color: rgb(223, 223, 233);
-  margin: 0vmin -5vmin 0 0;
+  margin: 0 5vmin 0 0;
   font-size: 3.5vmin;
 }
 
