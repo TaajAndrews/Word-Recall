@@ -40,7 +40,11 @@ Wireframe:
 
 MVP:
 
-![MVP](https://i.imgur.com/nAcUWpl.png)
+Screenshot during the game  
+
+![MVP](https://i.imgur.com/c1SEzFp.png)
+
+Screenshot after the game is over
 
 ![MVP](https://i.imgur.com/FcLpV2P.png)
 
